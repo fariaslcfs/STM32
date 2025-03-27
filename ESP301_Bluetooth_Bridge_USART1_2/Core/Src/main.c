@@ -45,8 +45,8 @@ UART_HandleTypeDef huart1;
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
-uint8_t usart1_rx_buffer[16]; // Buffer maior para USART1 (Bluetooth)
-uint8_t usart2_rx_buffer[16]; // Buffer maior para USART2 (ESP301)
+uint8_t usart1_rx_buffer[1]; // Buffer maior para USART1 (Bluetooth)
+uint8_t usart2_rx_buffer[1]; // Buffer maior para USART2 (ESP301)
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/

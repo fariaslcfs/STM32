@@ -21,9 +21,9 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
   8 .data         0000000c  20000000  08002b70  00004000  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  9 .bss          000000d0  2000000c  08002b7c  0000400c  2**2
+  9 .bss          000000b8  2000000c  08002b7c  0000400c  2**2
                   ALLOC
- 10 ._user_heap_stack 00000604  200000dc  08002b7c  000040dc  2**0
+ 10 ._user_heap_stack 00000604  200000c4  08002b7c  000040c4  2**0
                   ALLOC
  11 .ARM.attributes 00000030  00000000  00000000  0000400c  2**0
                   CONTENTS, READONLY
@@ -465,7 +465,7 @@ int main(void)
  8000578:	40020800 	.word	0x40020800
  800057c:	200000b8 	.word	0x200000b8
  8000580:	20000028 	.word	0x20000028
- 8000584:	200000c8 	.word	0x200000c8
+ 8000584:	200000bc 	.word	0x200000bc
  8000588:	20000070 	.word	0x20000070
 
 0800058c <SystemClock_Config>:
@@ -859,7 +859,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
  80007e8:	200000b8 	.word	0x200000b8
  80007ec:	20000070 	.word	0x20000070
  80007f0:	40004400 	.word	0x40004400
- 80007f4:	200000c8 	.word	0x200000c8
+ 80007f4:	200000bc 	.word	0x200000bc
  80007f8:	20000028 	.word	0x20000028
 
 080007fc <HAL_UART_TxCpltCallback>:
@@ -910,7 +910,7 @@ void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
  8000834:	bd80      	pop	{r7, pc}
  8000836:	bf00      	nop
  8000838:	40011000 	.word	0x40011000
- 800083c:	200000c8 	.word	0x200000c8
+ 800083c:	200000bc 	.word	0x200000bc
  8000840:	20000070 	.word	0x20000070
  8000844:	40004400 	.word	0x40004400
  8000848:	200000b8 	.word	0x200000b8
@@ -966,7 +966,7 @@ void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
  8000890:	200000b8 	.word	0x200000b8
  8000894:	20000028 	.word	0x20000028
  8000898:	40004400 	.word	0x40004400
- 800089c:	200000c8 	.word	0x200000c8
+ 800089c:	200000bc 	.word	0x200000bc
  80008a0:	20000070 	.word	0x20000070
 
 080008a4 <Error_Handler>:
@@ -1546,7 +1546,7 @@ LoopFillZerobss:
   ldr r2, =_sbss
  8000b0c:	2000000c 	.word	0x2000000c
   ldr r4, =_ebss
- 8000b10:	200000dc 	.word	0x200000dc
+ 8000b10:	200000c4 	.word	0x200000c4
 
 08000b14 <ADC_IRQHandler>:
  * @retval None       
@@ -1709,7 +1709,7 @@ __weak void HAL_IncTick(void)
  8000bd8:	4770      	bx	lr
  8000bda:	bf00      	nop
  8000bdc:	20000008 	.word	0x20000008
- 8000be0:	200000d8 	.word	0x200000d8
+ 8000be0:	200000c0 	.word	0x200000c0
 
 08000be4 <HAL_GetTick>:
   * @note This function is declared as __weak to be overwritten in case of other 
@@ -1729,7 +1729,7 @@ __weak uint32_t HAL_GetTick(void)
  8000bf0:	f85d 7b04 	ldr.w	r7, [sp], #4
  8000bf4:	4770      	bx	lr
  8000bf6:	bf00      	nop
- 8000bf8:	200000d8 	.word	0x200000d8
+ 8000bf8:	200000c0 	.word	0x200000c0
 
 08000bfc <HAL_Delay>:
   *       implementations in user file.

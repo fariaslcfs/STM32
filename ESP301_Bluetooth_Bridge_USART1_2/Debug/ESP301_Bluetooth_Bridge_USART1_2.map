@@ -2792,7 +2792,7 @@ LOAD C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .igot.plt      0x2000000c        0x0 C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
                 0x2000000c                        . = ALIGN (0x4)
 
-.bss            0x2000000c       0xd0 load address 0x08002b7c
+.bss            0x2000000c       0xb8 load address 0x08002b7c
                 0x2000000c                        _sbss = .
                 0x2000000c                        __bss_start__ = _sbss
  *(.bss)
@@ -2803,29 +2803,31 @@ LOAD C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .bss.huart2    0x20000070       0x48 ./Core/Src/main.o
                 0x20000070                huart2
  .bss.usart1_rx_buffer
-                0x200000b8       0x10 ./Core/Src/main.o
+                0x200000b8        0x1 ./Core/Src/main.o
                 0x200000b8                usart1_rx_buffer
+ *fill*         0x200000b9        0x3 
  .bss.usart2_rx_buffer
-                0x200000c8       0x10 ./Core/Src/main.o
-                0x200000c8                usart2_rx_buffer
- .bss.uwTick    0x200000d8        0x4 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
-                0x200000d8                uwTick
+                0x200000bc        0x1 ./Core/Src/main.o
+                0x200000bc                usart2_rx_buffer
+ *fill*         0x200000bd        0x3 
+ .bss.uwTick    0x200000c0        0x4 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
+                0x200000c0                uwTick
  *(COMMON)
-                0x200000dc                        . = ALIGN (0x4)
-                0x200000dc                        _ebss = .
-                0x200000dc                        __bss_end__ = _ebss
+                0x200000c4                        . = ALIGN (0x4)
+                0x200000c4                        _ebss = .
+                0x200000c4                        __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x200000dc      0x604 load address 0x08002b7c
-                0x200000e0                        . = ALIGN (0x8)
- *fill*         0x200000dc        0x4 
+                0x200000c4      0x604 load address 0x08002b7c
+                0x200000c8                        . = ALIGN (0x8)
+ *fill*         0x200000c4        0x4 
                 [!provide]                        PROVIDE (end = .)
-                0x200000e0                        PROVIDE (_end = .)
-                0x200002e0                        . = (. + _Min_Heap_Size)
- *fill*         0x200000e0      0x200 
-                0x200006e0                        . = (. + _Min_Stack_Size)
- *fill*         0x200002e0      0x400 
-                0x200006e0                        . = ALIGN (0x8)
+                0x200000c8                        PROVIDE (_end = .)
+                0x200002c8                        . = (. + _Min_Heap_Size)
+ *fill*         0x200000c8      0x200 
+                0x200006c8                        . = (. + _Min_Stack_Size)
+ *fill*         0x200002c8      0x400 
+                0x200006c8                        . = ALIGN (0x8)
 
 /DISCARD/
  libc.a(*)
