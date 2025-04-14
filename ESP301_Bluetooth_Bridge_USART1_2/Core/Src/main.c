@@ -1,3 +1,10 @@
+/*
+ * NESTA VERSÃO, QUE É A OPERACIONAL, OS BYTES SÃO BUFFERIZADOS
+ * E ENVIADOS OU RECEBIDOS APÓS A CHEGADA E CONFIRMAÇÃO DOS CARACTERES
+ * DE CONTROLE \r VINDO DO ANDROID E \r\n VINDO DO ESP301
+ * */
+
+
 /* USER CODE BEGIN Header */
 /**
   ******************************************************************************
@@ -34,7 +41,7 @@
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 #define BUFFER_SIZE 64  // Tamanho suficiente para respostas longas (ex.: VE?)
-#define TIMEOUT_MS  100 // Timeout para aguardar o fim da mensagem
+#define TIMEOUT_MS  200 // Timeout para aguardar o fim da mensagem
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
