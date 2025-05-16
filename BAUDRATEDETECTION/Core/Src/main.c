@@ -101,7 +101,10 @@ int main(void)
 
 //	const char *command1 = "AT+UART=115200,1,0\r\n";
 //  	const char *command1 = "AT+NAME\r\n";
-  	const char command1[] = "AT\r\n";
+  	HAL_Delay(1000);
+//  	const char command1[] = "AT\r\n";
+  	const char command1[] = "AT+NAME=ESP30x";
+
 //    memset(rxBuffer, 0, RESPONSE_BUFFER_SIZE);
 //    char buffer[256];
 
@@ -117,6 +120,8 @@ int main(void)
 //		HAL_UART_Init(&huart2);
 //		sendATCommand("AT", 800); // HC-06
 ////		sendATCommand("AT\r\n", 200); // Todos os outros
+//      // Para o HC-05, não se deve colocar \r\n ou \r ou \n
+//    	// Para o HC-05, a alteração do nome é assim: "AT+NAME=ESP30x";
 //		// Para o HC-05, deve-se colocar no modo AT pressionando o botão e soltando depois de alimentá-lo
 //		// Para o HC-05, no modo AT, a velocidade é sempre 38400. Quando se muda a velocidade, muda-se a velocidade de operação
 //		// Para o HC-05, altera-se a velocidade com: AT+UART=baudrate,0,0
